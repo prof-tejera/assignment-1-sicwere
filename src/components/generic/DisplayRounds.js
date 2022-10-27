@@ -1,0 +1,15 @@
+import Input from "./Input";
+
+const DisplayRounds = ({currentRound, size, text, gap, ...props}) => {
+	currentRound ||= 1
+	gap ||= '5px'
+	size ||= '5'
+	return (
+		<label style={{ fontSize: '20px' }}>
+			{text}
+			<Input type="text" size={size} readOnly style={{ marginLeft: gap }} value={currentRound} {...props} />
+		</label>
+	)
+}
+
+export default DisplayRounds;

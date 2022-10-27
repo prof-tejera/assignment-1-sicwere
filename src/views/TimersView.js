@@ -19,14 +19,16 @@ const Timer = styled.div`
   font-size: 1.5rem;
 `;
 
-const TimerTitle = styled.div``;
+const TimerTitle = styled.div`
+  font-family: Times New Roman, serif
+`;
 
 const TimersView = () => {
   const timers = [
-    { title: "Stopwatch", C: <Stopwatch /> },
-    { title: "Countdown", C: <Countdown /> },
-    { title: "XY", C: <XY /> },
-    { title: "Tabata", C: <Tabata /> },
+    { title: "Stopwatch", C: <Stopwatch endTime="15" /> },
+    { title: "Countdown", C: <Countdown startTime="15" /> },
+    { title: "XY", C: <XY startTime="10" rounds="3" /> },
+    { title: "Tabata", C: <Tabata workTime="15" restTime="10" rounds="2" /> },
   ];
 
   return (
